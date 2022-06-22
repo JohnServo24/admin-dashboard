@@ -4,6 +4,7 @@ $card-color: #EAB308;
 $background-color: #F0F3F8;
 $outline-color: #c0c6d1;
 $sidebar-text-color: white;
+$card-text-color: rgb(90, 90, 90);
 
 
 @font-face {
@@ -26,10 +27,9 @@ $sidebar-text-color: white;
 
 body {
     height: 100vh;
-    width: 90%;
 
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1.3fr 6fr 2fr;
     grid-template-rows: min(160px) 1fr;
 
     background-color: $background-color;
@@ -149,7 +149,6 @@ header {
 
             ul {
                 list-style: none;
-                width: inherit;
 
                 display: flex;
                 gap: 1.5rem;
@@ -173,9 +172,14 @@ main {
     display: grid;
 
     grid-template-columns: 3fr 1fr;
+    padding-top: 1rem;
 
     .projects {
         padding: 1rem;
+
+        h1 {
+            padding-bottom: 1rem;
+        }
 
         .projects-main {
             display: grid;
@@ -183,8 +187,29 @@ main {
             gap: 1rem;
 
             .item {
-                border: 1px solid black;
-                max-width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                max-width: 400px;
+                min-height: 200px;
+                background-color: white;
+                padding: 1rem 2rem;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-left: 10px solid $card-color;
+                border-radius: 10px;
+
+                .description {
+                    :first-child {
+                        font-family: "roboto bold";
+                    }
+                    :last-child {
+                        color: $card-text-color;
+                    }
+                }
+                .projects-icons {
+                    text-align: right;
+                }
             }
         }
     }

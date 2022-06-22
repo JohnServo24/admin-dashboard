@@ -15,9 +15,8 @@
 
 body {
   height: 100vh;
-  width: 90%;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1.3fr 6fr 2fr;
   grid-template-rows: 160px 1fr;
   background-color: #F0F3F8;
 }
@@ -116,7 +115,6 @@ header .header-bottom-right {
 }
 header .header-bottom-right ul {
   list-style: none;
-  width: inherit;
   display: flex;
   gap: 1.5rem;
 }
@@ -134,9 +132,13 @@ main {
   grid-column: 2/4;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  padding-top: 1rem;
 }
 main .projects {
   padding: 1rem;
+}
+main .projects h1 {
+  padding-bottom: 1rem;
 }
 main .projects .projects-main {
   display: grid;
@@ -144,8 +146,25 @@ main .projects .projects-main {
   gap: 1rem;
 }
 main .projects .projects-main .item {
-  border: 1px solid black;
-  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  min-height: 200px;
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-left: 10px solid #EAB308;
+  border-radius: 10px;
+}
+main .projects .projects-main .item .description :first-child {
+  font-family: "roboto bold";
+}
+main .projects .projects-main .item .description :last-child {
+  color: rgb(90, 90, 90);
+}
+main .projects .projects-main .item .projects-icons {
+  text-align: right;
 }
 main .main-side {
   padding: 1rem;
