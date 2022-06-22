@@ -14,7 +14,7 @@ body {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 10% 1fr;
 }
 
 .sidebar {
