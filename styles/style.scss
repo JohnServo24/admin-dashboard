@@ -90,4 +90,27 @@ main {
     .main-side {
         border: 4px solid blue;
     }
+
+    .projects {
+
+    }
+
+    .main-side {
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .announcements {
+            
+            dl {
+                border: 1px solid black;
+            }
+        }
+        .trending {
+            .trending-wrapper {
+                border: 1px solid black;
+            }
+        }
+    }
 }
