@@ -79,6 +79,18 @@ main .projects {
 main .main-side {
   border: 4px solid blue;
 }
+main .projects {
+  padding: 1rem;
+}
+main .projects .projects-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+main .projects .projects-main .item {
+  border: 1px solid black;
+  max-width: 300px;
+}
 main .main-side {
   padding: 1rem;
   display: flex;
