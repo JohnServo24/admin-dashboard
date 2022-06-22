@@ -74,7 +74,7 @@ body {
 header {
     grid-column: 2 / 4;
 
-    padding: 0 2.5rem;
+    padding: 2.5rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     background-color: white;
     display: flex;
@@ -195,7 +195,7 @@ main {
                 max-width: 400px;
                 min-height: 200px;
                 background-color: white;
-                padding: 1rem;
+                padding: 1rem 1rem 1.4rem 1rem;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 border-left: 10px solid $card-color;
                 border-radius: 10px;
@@ -209,7 +209,11 @@ main {
                     }
                 }
                 .projects-icons {
-                    text-align: right;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 30px;
+
+                    padding-right: 1rem;
                 }
             }
         }
