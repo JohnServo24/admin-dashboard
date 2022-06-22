@@ -20,8 +20,6 @@ body {
 .sidebar {
   grid-row: 1/3;
   border: 1px solid black;
-  display: flex;
-  flex-direction: column;
 }
 .sidebar h1 {
   padding: 1rem;
