@@ -37,13 +37,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 1rem;
 }
 .sidebar nav ul {
   list-style: none;
 }
 .sidebar nav ul li {
   font-family: "roboto bold";
+  padding: 0.8rem;
 }
 .sidebar nav .side-top {
   padding-bottom: 2rem;

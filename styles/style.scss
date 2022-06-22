@@ -51,13 +51,13 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 1rem;
 
         ul {
             list-style: none;
 
             li {
                 font-family: "roboto bold";
+                padding: 0.8rem;
             }
         }
 
