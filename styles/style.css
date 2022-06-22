@@ -18,14 +18,13 @@ body {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: max(10%, 100px) 1fr;
+  grid-template-rows: 170px 1fr;
 }
 
 .sidebar {
   grid-row: 1/3;
   background-color: #0EA5E9;
   color: white;
-  border: 1px solid black;
 }
 .sidebar h1, .sidebar li {
   display: flex;
@@ -52,44 +51,86 @@ body {
 
 header {
   grid-column: 2/4;
-  border: 2px solid red;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
 }
 header .header-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-header .header-top .search {
-  width: 50ch;
-  height: 1rem;
-  border: 1px solid black;
+header .header-top-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 70%;
+}
+header .header-top-left .search {
+  width: 100%;
+  height: 2rem;
+  background-color: #F0F3F8;
+  border: 1px solid #c0c6d1;
   border-radius: 25px;
+}
+header .header-top-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+header .header-top-right img {
+  width: 45px;
+  border-radius: 50%;
+}
+header .header-top-right p {
+  font-family: "roboto bold";
 }
 header .header-bottom {
   display: flex;
   justify-content: space-between;
+}
+header .header-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .header-bottom-left img {
+  width: 70px;
+  border-radius: 50%;
+}
+header .header-bottom-left .greet-user p {
+  font-family: "roboto bold";
+}
+header .header-bottom-left .greet-user :last-child {
+  font-size: 1.5rem;
 }
 header .header-bottom-right {
   display: flex;
   align-items: center;
 }
 header .header-bottom-right ul {
+  list-style: none;
   width: inherit;
   display: flex;
-  gap: 5rem;
-  list-style: none;
+  gap: 1.5rem;
+}
+header .header-bottom-right ul li {
+  width: 6.5rem;
+  color: white;
+  background-color: #0EA5E9;
+  font-family: "roboto bold";
+  border-radius: 25px;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 main {
   grid-column: 2/4;
   display: grid;
   grid-template-columns: 3fr 1fr;
-}
-main .projects {
-  border: 3px solid green;
-}
-main .main-side {
-  border: 4px solid blue;
 }
 main .projects {
   padding: 1rem;

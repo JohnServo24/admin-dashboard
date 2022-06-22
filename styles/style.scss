@@ -2,6 +2,7 @@ $main-color: #0EA5E9;
 $button-color: #38BDF8;
 $card-color: #EAB308;
 $background-color: #F0F3F8;
+$outline-color: #c0c6d1;
 $sidebar-text-color: white;
 
 
@@ -29,7 +30,7 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: max(10%, 100px) 1fr;
+    grid-template-rows: min(170px) 1fr;
 }
 
 .sidebar {
@@ -37,7 +38,6 @@ body {
 
     background-color: $main-color;
     color: $sidebar-text-color;
-    border: 1px solid black;
 
     h1, li {
         display: flex;
@@ -71,19 +71,48 @@ body {
 
 header {
     grid-column: 2 / 4;
+    
+    padding: 1rem 2rem;
 
-    border: 2px solid red;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
 
     .header-top {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        .search {
-            width: 50ch;
-            height: 1rem;
-            border: 1px solid black;
-            border-radius: 25px;
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 70%;
+
+            .search {
+                width: 100%;
+                height: 2rem;
+
+                background-color: $background-color;
+                border: 1px solid $outline-color;
+                border-radius: 25px;
+            }
+        }
+    
+        &-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2rem;
+    
+            img {
+                width: 45px;
+                border-radius: 50%;
+            }
+            p {
+                font-family: "roboto bold";
+            }
         }
     }
 
@@ -91,16 +120,46 @@ header {
         display: flex;
         justify-content: space-between;
 
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                width: 70px;
+                border-radius: 50%;
+            }
+            .greet-user {
+                p {
+                    font-family: "roboto bold";
+                }
+
+                :last-child {
+                    font-size: 1.5rem;
+                }
+            }
+        }
 
         &-right {
             display: flex;
             align-items: center;
 
             ul {
-                width: inherit;
-                display: flex;
-                gap: 5rem;
                 list-style: none;
+                width: inherit;
+
+                display: flex;
+                gap: 1.5rem;
+
+                li {
+                    width: 6.5rem;
+                    color: white;
+                    background-color: $main-color;
+                    font-family: "roboto bold";
+                    border-radius: 25px;
+                    padding: 0.5rem;
+                    text-align: center;
+                }
             }
         }
     }
@@ -111,14 +170,6 @@ main {
     display: grid;
 
     grid-template-columns: 3fr 1fr;
-
-    .projects {
-        border: 3px solid green;
-    }
-
-    .main-side {
-        border: 4px solid blue;
-    }
 
     .projects {
         padding: 1rem;
