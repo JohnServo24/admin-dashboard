@@ -27,16 +27,17 @@ body {
   color: white;
   border: 1px solid black;
 }
+.sidebar h1, .sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .sidebar h1 {
   padding: 1rem;
   padding-bottom: 2rem;
   font-family: "roboto bold";
   font-size: 1.5rem;
-}
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  gap: 5px;
 }
 .sidebar nav ul {
   list-style: none;

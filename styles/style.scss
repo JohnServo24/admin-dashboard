@@ -32,26 +32,28 @@ body {
     grid-template-rows: max(10%, 100px) 1fr;
 }
 
-.sidebar{
+.sidebar {
     grid-row: 1 / 3;
 
     background-color: $main-color;
     color: $sidebar-text-color;
     border: 1px solid black;
 
+    h1, li {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 
     h1 {
         padding: 1rem;
         padding-bottom: 2rem;
         font-family: "roboto bold";
         font-size: 1.5rem;
+        gap: 5px;
     }
 
     nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
         ul {
             list-style: none;
 
@@ -84,6 +86,7 @@ header {
             border-radius: 25px;
         }
     }
+
     .header-bottom {
         display: flex;
         justify-content: space-between;
@@ -92,6 +95,7 @@ header {
         &-right {
             display: flex;
             align-items: center;
+
             ul {
                 width: inherit;
                 display: flex;
@@ -107,9 +111,11 @@ main {
     display: grid;
 
     grid-template-columns: 3fr 1fr;
+
     .projects {
         border: 3px solid green;
     }
+
     .main-side {
         border: 4px solid blue;
     }
@@ -121,7 +127,7 @@ main {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1rem;
-            
+
             .item {
                 border: 1px solid black;
                 max-width: 300px;
@@ -135,12 +141,14 @@ main {
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
         .announcements {
-            
+
             dl {
                 border: 1px solid black;
             }
         }
+
         .trending {
             .trending-wrapper {
                 border: 1px solid black;
