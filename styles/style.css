@@ -36,6 +36,31 @@ body {
 header {
   grid-column: 2/4;
   border: 2px solid red;
+  padding: 1rem;
+}
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-top .search {
+  width: 50ch;
+  height: 1rem;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+header .header-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-bottom-right {
+  display: flex;
+  align-items: center;
+}
+header .header-bottom-right ul {
+  width: inherit;
+  display: flex;
+  gap: 5rem;
+  list-style: none;
 }
 
 main {
